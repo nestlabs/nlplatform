@@ -1,0 +1,14 @@
+
+
+from nestlabs.breadcrumbs.ProgramTracing import ProgramTracing
+from nestlabs.breadcrumbs.Event import *
+
+events = ProgramTracing(
+    events_list = [
+        Event(
+            name = "crash_dump",
+            params = [("Address", Param_pointer), ("Size", Param_uint32)],
+            description='"backtrace"'
+        ),
+    ]
+)
